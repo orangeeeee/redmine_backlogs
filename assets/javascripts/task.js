@@ -26,9 +26,6 @@ RB.Task = RB.Object.create(RB.Issue, {
     // Only change color of task if assigned_to_id has a selected user/group
     if(c!=undefined){
       this.$.css('background-color', c);
-      this.$.css('background', '-webkit-gradient(linear, left top, left bottom, from('+c_light+'), to('+c+'))');
-      this.$.css('background', '-moz-linear-gradient(top, '+c_light+', '+c+')');
-      this.$.css('filter', 'progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr='+c_light+',EndColorStr='+c+')');
     }
   },
   
@@ -39,10 +36,6 @@ RB.Task = RB.Object.create(RB.Issue, {
       // Chrome could not handling background-color css when use -webkit-gradient.
       if(dialog_bg){
         dialog.parents('.ui-dialog').css('background', dialog_bg);      
-      } else {
-        dialog.parents('.ui-dialog').css('background', '-webkit-gradient(linear, left top, left bottom, from(#eee), to(#aaa))');
-        dialog.parents('.ui-dialog').css('background', '-moz-linear-gradient(top, #eee, #aaa)');
-        dialog.parents('.ui-dialog').css('filter', 'progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#eeeeee,EndColorStr=#aaaaaa)');
       }
     } else {
       dialog.parents('.ui-dialog').css('background-color', dialog_bgcolor);

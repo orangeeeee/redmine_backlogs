@@ -15,22 +15,22 @@
   padding: 8px;
 }
 #backlogs_container .wrapper{
-   position: relative;
-   float: left;
-   left: 0.00%;
-   width: 100.00%;
+  position: relative;
+  float: left;
+  left: 0.00%;
+  width: 100.00%;
 }
 #backlogs_container .left-col{
-   position: relative;
-   float: left;
-   left: 0.00%;
-   width: 50.00%;
+  position: relative;
+  float: left;
+  left: 0.00%;
+  width: 50.00%;
 }
 #backlogs_container .right-col{
-   position: relative;
-   float: right;
-   right: 0.00%;
-   width: 50.00%;
+  position: relative;
+  float: right;
+  right: 0.00%;
+  width: 50.00%;
 }
 #backlogs_container .backlogs-panel-inner {
   padding: 4px;
@@ -43,34 +43,31 @@
   margin: 0 auto;
 }
 .fff-wrapmiddle{
-  float: left;
   width: 100%;
 }
 .fff-middle{
-  margin-right:112px;
-  margin-left:110px;
-}
-.fff-left{
   float: left;
-  width: 110px;
-  margin-left: -100%;
+  max-width: 63%;
+  word-break : break-all;
 }
+.fff-left {
+  float: left;
+  max-width: 16%;
+}
+/* status width */
 .fff-right{
-  float: left;
-  width: 112px;
-  margin-left: -112px;
+  float: right;
+  width: 17%;
 }
-
 .header .fff-middle{
-  margin-right:228px;
-  margin-left: 29px;
+  margin-left: 1%;
+  max-width: 65%;
 }
 .header .fff-left{
-  width: 29px;
+  width: 5%;
 }
 .header .fff-right{
-  width: 228px;
-  margin-left: -228px;
+  width:35%;
 }
 /* end fixed-fluid-fixed layout */
 
@@ -89,72 +86,51 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
   width:194px;
   overflow: hidden;
   white-space: nowrap;
+  color:#FFFFFF;
 }
 
 #backlogs_container .closedbacklog,
 #backlogs_container .backlog {
-  -moz-box-shadow: 3px 3px 4px #A0A0A0;
-  -webkit-box-shadow: 3px 3px 4px #A0A0A0;
-  box-shadow: 3px 3px 4px #A0A0A0;
-  -moz-border-radius:5px 5px 0px 0px;
-  -webkit-border-radius:5px 5px 0px 0px;
-  border-radius:5px 5px 0px 0px;
   display:block;
   margin:0 0 10px 0;
   position:relative;
   /* IE only*/
-  border: 1px solid #CCCCCC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#CCC));
-  background: -moz-linear-gradient(top, #EEE, #CCC);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#CCCCCC);
+  background-position: top;
+  background-color: #F2FAFF;
+
 }
 
 #backlogs_container .header{
   white-space: nowrap;
-  -moz-border-radius:5px 5px 0px 0px;
-  -webkit-border-radius:5px 5px 0px 0px;
-  border-radius:5px 5px 0px 0px;
-  background-color:#CCCCCC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#CCC));
-  background: -moz-linear-gradient(top, #EEE, #CCC);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#CCCCCC);
-  position:relative;
-  white-space: nowrap;
-  height:30px;
-  border-bottom: 1px solid #AAAAAA
+  background-color: #60717B;
+  position: relative;
+  height: 30px;
+  color: #FFFFFF;
 }
 /*.backlog .closedbacklog .header{
   background: #CCCCCC;
 }*/
 #backlogs_container .header .menu{
-  -moz-box-shadow: 1px 0px 0px #DEDEDE;
-  -webkit-box-shadow: 1px 0px 0px #DEDEDE;
-  box-shadow: 1px 0px 0px #DEDEDE;
-  -moz-border-radius:5px 0px 0px 0px;
-  -webkit-border-radius:5px 0px 0px 0px;
-  border-radius:5px 0px 0px 0px;
-  border-right:1px solid #999999;
-  cursor:pointer;
+  border-right: 1px solid #B7B7B7;
+  cursor: pointer;
   position: relative;
-  overflow:visible;
-  height:30px;
+  overflow: visible;
+  height: 30px;
 }
 
 #backlogs_container .header .menu:hover {
-  -moz-box-shadow: 2px 2px 3px #999999;
-  -webkit-box-shadow: 2px 2px 3px #999999;
-  box-shadow: 2px 2px 3px #999999;
-  background-color:#EFEFEF;
-  border-right:none;
-  width:30px;
-  z-index:1000;
+  background-color: #50636D;
+  border-right: none;
+  z-index: 1000;
 }
 
 #backlogs_container .header .menu .icon{
-  position:relative;
-  left:7px;
-  top:7px;
+  position: relative;
+  left: 25%;
+  top: 7px;
   padding: 0;
+  width: 50%;
+  text-indent: 0px;
 }
 
 #backlogs_container .header .menu .items{
@@ -162,9 +138,6 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 }
 
 #backlogs_container .header .menu:hover .items{
-  -moz-box-shadow: 2px 2px 3px #999999;
-  -webkit-box-shadow: 2px 2px 3px #999999;
-  box-shadow: 2px 2px 3px #999999;
   background-color:#EFEFEF;
   display:block;
   left:0;
@@ -199,9 +172,6 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
   font-weight:bold;
 }
 #backlogs_container .header .menu .item ul{
-  -moz-box-shadow: 2px 2px 3px #999999;
-  -webkit-box-shadow: 2px 2px 3px #999999;
-  box-shadow: 2px 2px 3px #999999;
   background-color:#EFEFEF;
   display:none;
   list-style:none;
@@ -248,7 +218,7 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
   font-weight:bold;
 }
 
-  /* container for sprint header (read) */
+/* container for sprint header (read) */
 #backlogs_container .header .headertext{
   background-color:transparent;
   display:block;
@@ -300,14 +270,14 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 
 /* backlog header*/
 #backlogs_container .header .date {
-  width: 80px;
-  margin-left: 6px;
+  width: 37%;
+  margin-left: 2%;
   float: left;
 }
 
 #backlogs_container .header .velocity {
   text-align: right;
-  padding-right: 2px;
+  padding-right: 2%;
 }
 
 /* backlog header invisibles */
@@ -326,12 +296,12 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 
 
 #backlogs_container .stories .story{
-  background-color:#FFFFF6;
+  background-color:#faf8c7;
   cursor:move;
   font-size:11px;
   margin:0;
   width:100%;
-  border-bottom: #AAAAAA 1px solid;
+  border-bottom: #FFFFFF 1px solid;
 }
 #backlogs_container .closedbacklog .stories .story{
   cursor:default;
@@ -347,61 +317,49 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
   background-position:center;
 }
 #backlogs_container .stories .story:hover {
-  background-color:rgb(254,248,168);
+  background-color: #CFE4F6;
 }
 #backlogs_container .stories .story .tracker_id{
   display:none;
 }
 #backlogs_container .stories .story .id{
   position:relative;
-  width:55px;
+  width:50px;
   float: left;
 }
 #backlogs_container .stories .story .id .t * {
-  background-color:#CCC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#CCC));
-  background: -moz-linear-gradient(top, #EEE, #CCC);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#CCCCCC);
+  background-color:#FFFFFF;
   display:block;
   font-size:10px;
   height:14px;
   line-height:14px;
-  overflow:hidden;
   padding-right:3px;
   margin-left:3px;
   text-align:right;
   text-decoration:none;
   position: relative;
   vertical-align:middle;
-  width:4em;
-  -moz-border-radius:4px;
-  -webkit-border-radius:4px;
-  border-radius:4px;
-  border: 1px solid #AAAAAA
+  width: 70%;
+  color: #000000;
+  border-radius: 2px;
+  border: 1px solid #CACACA;
 }
 
-#backlogs_container .stories .story .id .t a:hover {
-  background-color:#BBB;
-  background: -webkit-gradient(linear, left top, left bottom, from(#DDD), to(#BBB));
-  background: -moz-linear-gradient(top, #DDD, #BBB);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#DDDDDD,EndColorStr=#BBBBBB);
-}
 
 #backlogs_container .stories .story .id .v {
   display:none;
 }
 #backlogs_container .stories .story .project {
-  display:block;
-  position:relative;
-  float:left;
-  width:50px;
-  padding-left:2px;
-  white-space: nowrap;
-  overflow: hidden;
+
 }
 #backlogs_container .stories .story .project .t {
-  overflow:hidden;
+  height: auto;
+  word-break : break-all;
+  width: auto;
+  float:left;
+  margin-right: 3px;
 }
+
 #backlogs_container .stories .story .project .v {
   display:none;
 }
@@ -411,23 +369,24 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 }
 
 #backlogs_container .stories .story .subject {
-  overflow:hidden;
-  white-space:nowrap;
+  font-size:10px;
 }
 #backlogs_container .stories .story.closed .subject{
   text-decoration:line-through;
 }
 #backlogs_container .stories .story .status_id {
-  width:68px;
+  width: 70%;
   float: left;
-  padding-left:8px;
   white-space: nowrap;
+  overflow: hidden;
+  font-size: 10px;
+  margin-right: 3px;
 }
-
+/*points width*/
 #backlogs_container .stories .story .story_points {
-  text-align:right;
+  text-align: right;
   float: left;
-  width:34px;
+
 }
 /*meta in story*/
 #backlogs_container .stories .story .fixed_version_id,
@@ -438,10 +397,10 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 }
 
 #backlogs_container .stories .story .clearfix {
-    zoom:1;
-    clear:both;
-    height: 0; /*IE7*/
-    font-size: 0; /*IE7*/
+  zoom:1;
+  clear:both;
+  height: 0; /*IE7*/
+  font-size: 0; /*IE7*/
 }
 
 /* dialog */
@@ -518,7 +477,8 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 #backlogs_container .header .editing .effective_date.editor{
   height:23px;
   line-height:27px;
-  width:75px;
+  max-width:10%;
+  overflow:hidden;
 }
 #backlogs_container .header .editing .description.editor{
   display:none;
@@ -586,24 +546,20 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
   padding: 1px 4px 1px 4px;
   margin: 0.5em;
   margin-left: 1em;
-  -moz-border-radius:4px;
-  -webkit-border-radius:4px;
-  border-radius:4px;
-  border: 1px solid #AAAAAA;
-  background-color:#CCC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#CCC));
-  background: -moz-linear-gradient(top, #EEE, #CCC);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #6F98C7;
+  color: #FFFFFF;
 }
 #backlogs_container .editing .edit-actions a:hover {
-  background-color:#BBB;
-  background: -webkit-gradient(linear, left top, left bottom, from(#DDD), to(#BBB));
-  background: -moz-linear-gradient(top, #DDD, #BBB);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#DDDDDD,EndColorStr=#BBBBBB);
+  background-color: #4E779F;
+  text-decoration: none;
 }
 
 #backlogs_container .header .editing .edit-actions { /* make the save/cancel buttons visible for sprint editor */
   clear: both;
-  background: white;
+  background-color: #DFDFDF;
   position: relative;
   width: 100%;
   height: 30px;
@@ -641,55 +597,30 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 /* Naive but light handling of colors by user stories tracker */
 
 #backlogs_container .stories .tracker0{
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FFF));
-  background: -moz-linear-gradient(top, #EEE, #FFF);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#FFFFFF);
-  background-color:#FFFFFF;
+  background-color:#CDF4FC;
 }
 #backlogs_container .stories .tracker1{
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#EDD5EE));
-  background: -moz-linear-gradient(top, #EEE, #EDD5EE);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#EDD5EE);
-  background-color:#EDD5EE;
+  background-color:#CDF4FC;
 }
 #backlogs_container .stories .tracker2{
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#E0E3FA));
-  background: -moz-linear-gradient(top, #EEE, #E0E3FA);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#E0E3FA);
-  background-color:#E0E3FA;
+  background-color:#bcedc7;
 }
 #backlogs_container .stories .tracker3{
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#EAD6C8));
-  background: -moz-linear-gradient(top, #EEE, #EAD6C8);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#EAD6C8);
   background-color:#EAD6C8;
 }
 #backlogs_container .stories .tracker4{
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#E7FAE0));
-  background: -moz-linear-gradient(top, #EEE, #E7FAE0);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#E7FAE0);
   background-color:#E7FAE0;
 }
 #backlogs_container .stories .tracker5{
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#DAFEF8));
-  background: -moz-linear-gradient(top, #EEE, #DAFEF8);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#DAFEF8);
   background-color:#DAFEF8;
 }
 #backlogs_container .stories .tracker6{
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#EFF0BF));
-  background: -moz-linear-gradient(top, #EEE, #EFF0BF);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#EFF0BF);
   background-color:#EFF0BF;
 }
 #backlogs_container .stories .tracker7{
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FED0D0));
-  background: -moz-linear-gradient(top, #EEE, #FED0D0);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#EEEEEE,EndColorStr=#FED0D0);
   background-color:#FED0D0;
 }
 #backlogs_container .stories .story_field {
-  overflow: hidden;
   padding-top: 4px;
   padding-bottom: 5px;
 }
@@ -702,10 +633,31 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 
 /* override: display story subject in multiple lines */
 .rb-multilinesubject #backlogs_container .stories .story .subject {
-  white-space: normal;
+white-space: normal;
   height: auto;
   overflow: show;
 }
 
 /* show completed sprints */
-#show_completed_sprints { cursor:pointer; }
+#show_completed_sprints {
+  cursor:pointer;
+  background-color: #60717B;
+  padding-top: 7px;
+  padding-right: 12px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  margin-left: 5px;
+  border-radius: 2px;
+  color: #FFFFFF;
+}
+#toolbar{
+  border-radius: 0px;
+}
+a, a:link, a:visited {
+  color: #29679D;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+  color: #6394BF;
+}

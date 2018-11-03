@@ -36,10 +36,10 @@ See RB.Taskboard.initialize()
 }
 
 #taskboard { position: relative; } /*for fixed header*/
-#impediments { padding-top: 40px; }
+#impediments { padding-top: 30px; }
 /* status labels */
 #board_header{
-  background-color:#EEEEEE;
+  background-color:#60717B;
   border:1px solid #CCCCCC;
   margin-bottom:0;
   margin-right:10px;
@@ -47,15 +47,13 @@ See RB.Taskboard.initialize()
   z-index: 200;
 }
 #board_header td{
-  background-color:#EEEEEE;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#DDD));
-  background: -moz-linear-gradient(top, #FFF, #DDD);
+  background-color:#60717B;
   filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#FFFFFF,EndColorStr=#DDDDDD);
   border-right:1px dotted #CFCFCF;
-  color:#4E4E4E;
+  color:#ffffff;
   font-size:14px;
   font-weight:bold;
-  height:30px;
+  height:20px;
   text-align:center;
   vertical-align:middle;
 }
@@ -104,9 +102,6 @@ See RB.Taskboard.initialize()
   -moz-box-shadow: 2px 2px 2px #CCCCCC;
   -webkit-box-shadow: 2px 2px 2px #CCCCCC;;
   box-shadow: 2px 2px 2px #CCCCCC;;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FEE), to(#FD2));
-  background: -moz-linear-gradient(top, #FEE, #FD2);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#FFEEEE,EndColorStr=#FFDD22);
   background-color:#F8F6A5;
   border:none;
   display:block;
@@ -133,6 +128,7 @@ See RB.Taskboard.initialize()
 .story .id .remaininghours {
   float:right;
   margin-left: 4px;
+  font-weight: bold;
 }
 .story .id .assignee{
   font-weight: bold;
@@ -173,8 +169,6 @@ See RB.Taskboard.initialize()
 /* item styles used by .task and .impediment */
 #taskboard .issue, #taskboard .placeholder{
   background-color:#CCCCCC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#E0E0E0), to(#AAA));
-  background: -moz-linear-gradient(top, #E0E0E0, #AAA);
   filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#E0E0E0,EndColorStr=#AAAAAA);
   border:none;
   cursor:move;
@@ -399,4 +393,7 @@ See RB.Taskboard.initialize()
 
 #project_quick_jump_box{
   max-width: 300px;
+}
+.prevent_edit {
+  font-weight: bold;
 }

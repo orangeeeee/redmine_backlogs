@@ -14,9 +14,6 @@ RB.$(function() {
       c_light = "#E0E0E0";
     }
     RB.$(this).parents('.ui-dialog').css('background-color', c);
-    RB.$(this).parents('.ui-dialog').css('background', '-webkit-gradient(linear, left top, left bottom, from('+c_light+'), to('+c+'))');
-    RB.$(this).parents('.ui-dialog').css('background', '-moz-linear-gradient(top, '+c_light+', '+c+')');    
-    RB.$(this).parents('.ui-dialog').css('filter', 'progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr='+c_light+',EndColorStr='+c+')');
   });
 
   // hold down alt when clicking an issue id to open it in the current tab

@@ -27,9 +27,6 @@ module RbCommonHelper
       color_from = Backlogs::Color.new(color_to).lighten(0.5)
       "style='
 background-color:#{task.assigned_to.backlogs_preference[:task_color]};
-background: -webkit-gradient(linear, left top, left bottom, from(#{color_from}), to(#{color_to}));
-background: -moz-linear-gradient(top, #{color_from}, #{color_to});
-filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#{color_from},EndColorStr=#{color_to});
 '"
     end
   end
