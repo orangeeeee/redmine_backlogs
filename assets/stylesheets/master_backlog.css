@@ -328,7 +328,7 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 #backlogs_container .stories .story{
   background-color:#FFFFF6;
   cursor:move;
-  font-size:10px;
+  font-size:11px;
   margin:0;
   width:100%;
   border-bottom: #AAAAAA 1px solid;
