@@ -370,7 +370,7 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 }
 
 #backlogs_container .stories .story .subject {
-  font-size:10px;
+  font-size:11px;
 }
 #backlogs_container .stories .story.closed .subject{
   text-decoration:line-through;
