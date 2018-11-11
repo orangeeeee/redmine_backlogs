@@ -179,8 +179,10 @@ background-color:#{task.assigned_to.backlogs_preference[:task_color]};
           res = "画"
         elsif cfn == "サーバ"
           res = "サ"
-        else
+        elsif cfn == "画面/サーバ"
           res = "<span class=\"ui\">画</span><span class=\"server\">サ</span>"
+        else
+          res = ""
         end
       end
     }
