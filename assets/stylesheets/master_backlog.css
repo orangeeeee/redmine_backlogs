@@ -47,7 +47,7 @@
 }
 .fff-middle{
   float: left;
-  max-width: 63%;
+  max-width: 65%;
   word-break : break-all;
 }
 .fff-left {
@@ -323,7 +323,7 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 }
 #backlogs_container .stories .story .id{
   position:relative;
-  width:8%;
+  width:6%;
   float: left;
 }
 #backlogs_container .stories .story .id .t * {
