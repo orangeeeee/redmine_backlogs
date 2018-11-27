@@ -195,7 +195,7 @@ background-color:#{task.assigned_to.backlogs_preference[:task_color]};
 
       if value.custom_field.name == "Phase"
           shouVal = show_value(value)
-          res = shouVal.empty? ? "【未設定】" : shouVal
+          res = shouVal.nil? ? "【未設定】" : shouVal
       end
     }
     res.html_safe
