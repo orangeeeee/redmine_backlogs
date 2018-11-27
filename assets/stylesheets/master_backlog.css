@@ -621,6 +621,12 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 #backlogs_container .stories .tracker7{
   background-color:#FED0D0;
 }
+#backlogs_container .stories .tracker8{
+  background-color:#ffe1bc;
+}
+#backlogs_container .stories .tracker23{
+  background-color:#ffe1bc;
+}
 #backlogs_container .stories .story_field {
   padding-top: 4px;
   padding-bottom: 5px;
