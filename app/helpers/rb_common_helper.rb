@@ -194,7 +194,7 @@ background-color:#{task.assigned_to.backlogs_preference[:task_color]};
     story.custom_field_values.each {|value|
 
       if value.custom_field.name == "Phase"
-          res = show_value(value) == '' ? "【未設定】" : show_value(value)
+          res = show_value(value) == '' ? "未設定" : show_value(value)
       end
     }
     res.html_safe
