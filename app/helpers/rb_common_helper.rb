@@ -201,6 +201,20 @@ background-color:#{task.assigned_to.backlogs_preference[:task_color]};
     res.html_safe
   end
 
+  def subject_tracker(story)
+    return '' if story.new_record?
+    res = ''
+
+    subj = story.subject
+    isSB=subj.start_with?("【仕様不備")
+    isSF=subj.start_with?("【仕様変更")
+    if !isSB && !isSF
+      res += "【" + story.tracker.name + "】"
+    end
+
+    res.html_safe
+  end
+
   def updated_on_with_milliseconds(story)
     date_string_with_milliseconds(story.updated_on, 0.001) unless story.blank?
   end
