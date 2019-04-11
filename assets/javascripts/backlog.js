@@ -329,7 +329,7 @@ RB.Backlog = RB.Object.create({
     for (var t in tracker_total) {
        tracker_summary += '<b>' + t + ':</b> ' + tracker_total[t] + '<br />';
     }
-    sprint_points.qtip('option', 'content.text', tracker_summary);
+    sprint_points.qtip('option', 'content.text', 'st:::' + tracker_summary);
   },
 
   showBurndownChart: function(event){
