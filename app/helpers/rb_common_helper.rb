@@ -208,8 +208,7 @@ background-color:#{task.assigned_to.backlogs_preference[:task_color]};
     subj = story.subject
     isSB=subj.start_with?("【仕様不備")
     isSF=subj.start_with?("【仕様変更")
-    isBG=subj.start_with?("【バグ")
-    if !isSB && !isSF && isBG
+    if !isSB && !isSF
       res += "【" + story.tracker.name + "】"
     end
 
