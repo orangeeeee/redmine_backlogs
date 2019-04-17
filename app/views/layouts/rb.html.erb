@@ -168,7 +168,8 @@ RB.$(function(){
 </body>
 <script type="text/javascript">
     $(function(){
-        $('#stories-for-product-backlog li').length;
+        var backlogs_ticket_count = $('#stories-for-product-backlog li').length;
+        $('#product_backlog_container').children('.name').append('<p>（チケット数：' + backlogs_ticket_count + '）</p>');
     });
 </script>
 </html>
