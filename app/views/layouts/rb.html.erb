@@ -168,11 +168,11 @@ RB.$(function(){
 </body>
 <script type="text/javascript">
     $(function(){
-        var backlogs_ticket_count = $('#stories-for-product-backlog li').length;
-        var ph1_count = $('#stories-for-product-backlog li').find(".phase_field:contains('PH1')").length;
-        var functional_ticket_count = $(".tracker_name_field:contains('機能')").length;
-        var ph2_count = backlogs_ticket_count - ph1_count - ph1_count - functional_ticket_count;
-        $('#product_backlog_container').find('.name').append('（PH2チケット数：' + ph2_count + '）');
+
+        var ph2_all_count = $('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").length;
+        var functional_ticket_count = $('#stories-for-product-backlog li').find(".tracker_name_field:contains('機能')").length;
+        var ph2_count = ph2_all_count - functional_ticket_count;
+        $('#product_backlog_container').find('.name').append('（PH2チケット数：' + ph2_count + '(機能除く)）');
     });
 </script>
 </html>
