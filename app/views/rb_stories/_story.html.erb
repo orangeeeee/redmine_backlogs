@@ -15,13 +15,13 @@
     </div>
 
     <div class="tracker_id editable story_field" fieldtype="select" fieldname="tracker_id" fieldlabel="<%= l(:field_tracker_id) %>">
-      <div class="t tracker_name_field"><%= h tracker_name_or_empty(story) %></div>
+      <div class="t"><%= h tracker_name_or_empty(story) %></div>
       <div class="v"><%= tracker_id_or_empty(story) %></div>
     </div>
   </div>
   <div class="fff-wrapmiddle">
     <div class="story_field fff-middle">
-      <span class="editable subject" fieldname="subject" fieldlabel="<%= l(:field_subject) %>" fieldtype="textarea"><%= subject_tracker(story) %><%= h story.subject %></span>
+      <span class="editable subject editable subject" fieldname="subject" fieldlabel="<%= l(:field_subject) %>" fieldtype="textarea"><%= subject_tracker(story) %><%= h story.subject %></span>
     </div>
   </div>
   <div class="fff-right">
