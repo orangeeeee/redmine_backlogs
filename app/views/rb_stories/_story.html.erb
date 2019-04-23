@@ -10,12 +10,12 @@
 
   <div class="fff-left">
     <div class="project editable story_field" fieldtype="select" fieldname="project_id" fieldlabel="<%= l(:field_project_id) %>">
-      <div class="t"><%= custom_fields_phase(story) %></div>
+      <div class="t phase_field"><%= custom_fields_phase(story) %></div>
       <div class="v"><%= story.project_id %></div>
     </div>
 
     <div class="tracker_id editable story_field" fieldtype="select" fieldname="tracker_id" fieldlabel="<%= l(:field_tracker_id) %>">
-      <div class="t"><%= h tracker_name_or_empty(story) %></div>
+      <div class="t tracker_name_field"><%= h tracker_name_or_empty(story) %></div>
       <div class="v"><%= tracker_id_or_empty(story) %></div>
     </div>
   </div>
