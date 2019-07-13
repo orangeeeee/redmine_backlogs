@@ -185,9 +185,7 @@
         var functional_ticket_count = $('#stories-for-product-backlog li').find(".tracker_name_field:contains('機能')").length;
 
         var ph2_count = ph2_all_count - functional_ticket_count;
-        $('#product_backlog_container').find('.name').append('&lt;span style=&quot;font-size: 13px;&quot;&gt'
-            + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）'
-            + '&lt;/span&gt;');
+        $('#product_backlog_container').find('.name').append('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
         $('#product_backlog_container').find('.header').find('.fff-right').remove()
     });
 </script>
