@@ -184,6 +184,11 @@
         var siyouhenkouCnt = $('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【仕様変更')").length;
         var functional_ticket_count = $('#stories-for-product-backlog li').find(".tracker_name_field:contains('機能')").length;
         var assignee_name_hd_clzzs = $('.assignee_name_hd_clzz');
+        $.each(assignee_name_hd_clzzs, function(i, value) {
+            if($(value).value !== '') {
+                $(value).prev('prevent_edit').addClass('prevent_edit_exists_pic');
+            }
+        });
         var ph2_count = ph2_all_count - functional_ticket_count;
         $('#product_backlog_container').find('.name').append('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
         $('#product_backlog_container').find('.header').find('.fff-right').remove()
