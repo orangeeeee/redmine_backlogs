@@ -186,7 +186,7 @@
         var assignee_name_hd_clzzs = $('.assignee_name_hd_clzz');
         $.each(assignee_name_hd_clzzs, function(i, value) {
             if($(value).val() !== '') {
-                $(value).prev('prevent_edit').addClass('.prevent_edit_exists_pic');
+                $(value).prev('.prevent_edit').addClass('prevent_edit_exists_pic');
             }
         });
         var ph2_count = ph2_all_count - functional_ticket_count;
