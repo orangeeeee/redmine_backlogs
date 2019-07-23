@@ -185,7 +185,7 @@
         var functional_ticket_count = $('#stories-for-product-backlog li').find(".tracker_name_field:contains('機能')").length;
         var assignee_name_hd_clzzs = $('.assignee_name_hd_clzz');
         $.each(assignee_name_hd_clzzs, function(i, value) {
-            if($(value).value !== '') {
+            if($(value).val() !== '') {
                 $(value).prev('prevent_edit').addClass('prevent_edit_exists_pic');
             }
         });
