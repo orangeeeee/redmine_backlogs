@@ -396,10 +396,9 @@ See RB.Taskboard.initialize()
 }
 .prevent_edit {
   font-weight: bold;
-  background-color:#f8bfe0 ;
+  background-color:#f8bfe0 !important;
 }
 
-.prevent_edit_exists_pic {
-  font-weight: bold;
+#backlogs_container .stories .story .id .t a.prevent_edit_exists_pic {
   background-color:#f8bfe0 ;
 }
