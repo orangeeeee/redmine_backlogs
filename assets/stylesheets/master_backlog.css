@@ -345,6 +345,10 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 }
 
 
+#backlogs_container .stories .story .id .t a.prevent_edit_exists_pic {
+  background-color:#f8bfe0 ;
+}
+
 #backlogs_container .stories .story .id .v {
   position:relative;
   width:50px;

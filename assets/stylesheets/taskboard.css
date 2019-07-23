@@ -399,6 +399,3 @@ See RB.Taskboard.initialize()
   background-color:#f8bfe0 !important;
 }
 
-#backlogs_container .stories .story .id .t a.prevent_edit_exists_pic {
-  background-color:#f8bfe0 ;
-}
