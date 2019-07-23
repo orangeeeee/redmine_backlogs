@@ -396,4 +396,10 @@ See RB.Taskboard.initialize()
 }
 .prevent_edit {
   font-weight: bold;
+  background-color:#f8bfe0 ;
+}
+
+.prevent_edit_exists_pic {
+  font-weight: bold;
+  background-color:#f8bfe0 ;
 }
