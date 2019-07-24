@@ -94,6 +94,22 @@ RB.BoardUpdater = RB.Object.create({
         RB.$('#sprintestimatedhours').text(sprintestimatedhours);
     }
 
+    var ph2_all_count = RB.$('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").length;
+
+    var bugsCnt = RB.$('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【バグ')").length;
+    var siyoufubiCnt = RB.$('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【仕様不備')").length;
+    var siyouhenkouCnt = RB.$('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【仕様変更')").length;
+    var functional_ticket_count = RB.$('#stories-for-product-backlog li').find(".tracker_name_field:contains('機能')").length;
+    var assignee_name_hd_clzzs = RB.$('.assignee_name_hd_clzz');
+    RB.$.each(assignee_name_hd_clzzs, function(i, value) {
+      if(RB.$(value).val() !== '') {
+        RB.$(value).prev('.prevent_edit').addClass('prevent_edit_exists_pic');
+      }
+    });
+    var ph2_count = ph2_all_count - functional_ticket_count;
+    RB.$('#product_backlog_container').find('.name').html('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
+
+
     self.processAllItems(data);
     self.adjustPollWait(RB.$(data).children(":not(.meta)").length);
     self.poll();
