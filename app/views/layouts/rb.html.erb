@@ -190,7 +190,7 @@
             }
         });
         var ph2_count = ph2_all_count - functional_ticket_count;
-        $('#product_backlog_container').find('.name').append('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
+        $('#product_backlog_container').find('.name').append('<span id="total_bugfix_counts" style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
         $('#product_backlog_container').find('.header').find('.fff-right').remove()
     });
 </script>

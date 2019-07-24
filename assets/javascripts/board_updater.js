@@ -107,7 +107,7 @@ RB.BoardUpdater = RB.Object.create({
       }
     });
     var ph2_count = ph2_all_count - functional_ticket_count;
-    RB.$('#product_backlog_container').find('.name').html('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
+    RB.$('#product_backlog_container').find('.name').find('#total_bugfix_counts').html('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
 
 
     self.processAllItems(data);
