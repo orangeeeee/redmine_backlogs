@@ -4,7 +4,7 @@
      qtip_cls = "story_tooltip_ajax" unless defined?(render_tooltip) %>
   <div class="id <%= qtip_cls %> story_field">
     <div class="tooltip_text"><%= render :partial => "rb_stories/tooltip", :object => story if defined?(render_tooltip) %></div>
-    <div class="t"><%= issue_link_or_empty(story) %><input type="hidden" class="assignee_name_hd_clzz" name="assignee_name_hd" value="<%= assignee_name_or_empty(story) %>"></div>
+    <div class="t"><%= issue_link_or_empty(story) %><input type="hidden" class="assignee_name_hd_clzz" name="assignee_name_hd" value="<%= assignee_name_or_empty(story) %>"><input type="hidden" class="triage_level_clzz" name="triage_level" value="<%=l(:field_priority)%>"></div>
     <div class="v"><%= id_or_empty(story) %></div>
   </div>
 
