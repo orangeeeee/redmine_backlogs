@@ -106,6 +106,18 @@ RB.BoardUpdater = RB.Object.create({
         RB.$(value).prev('.prevent_edit').addClass('prevent_edit_exists_pic');
       }
     });
+    var triage_level_clzz = RB.$('.triage_level_clzz');
+    RB.$.each(triage_level_clzz, function(i, value) {
+      if(RB.$(value).val() === '2') {
+        RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_middle_1');
+      }
+      else if(RB.$(value).val() === '4' || RB.$(value).val() === '5') {
+        RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_high');
+      }
+      else if(RB.$(value).val() === '6') {
+        RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_emergency');
+      }
+    });
     var ph2_count = ph2_all_count - functional_ticket_count;
     RB.$('#product_backlog_container').find('.name').find('#total_bugfix_counts').html('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
 
