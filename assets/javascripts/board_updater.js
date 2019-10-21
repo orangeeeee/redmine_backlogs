@@ -111,8 +111,11 @@ RB.BoardUpdater = RB.Object.create({
       if(RB.$(value).val() === '2') {
         RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_middle_1');
       }
-      else if(RB.$(value).val() === '10' || RB.$(value).val() === '3') {
-        RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_high');
+      else if(RB.$(value).val() === '10') {
+        RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_high_2');
+      }
+      else if(RB.$(value).val() === '3') {
+        RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_high_1');
       }
       else if(RB.$(value).val() === '6') {
         RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_emergency');
