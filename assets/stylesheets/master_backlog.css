@@ -9,7 +9,20 @@
  * .close_sprint (bind click on)
  */
 
+table{
+  border:1px solid #666;
+  border-spacing: 0;
+}
+td,th{
 
+  border:1px solid #666;
+}
+td,th{
+  padding:1px;
+}
+th{
+  background:#EFEFEF;
+}
 /* fluid 2 colum layout */
 #backlogs_container{
   padding: 8px;
