@@ -188,18 +188,6 @@ background-color:#{task.assigned_to.backlogs_preference[:task_color]};
     }
     res.html_safe
   end
-  def custom_fields_phase(story)
-    return '' if story.new_record?
-    res = ''
-    story.custom_field_values.each {|value|
-
-      if value.custom_field.name == "Phase"
-          shouVal = show_value(value)
-          res = shouVal.nil? ? "【未設定】" : "【" + shouVal
-      end
-    }
-    res.html_safe
-  end
 
   def custom_fields_target(story)
     return '' if story.new_record?
@@ -208,7 +196,7 @@ background-color:#{task.assigned_to.backlogs_preference[:task_color]};
 
       if value.custom_field.name == "target"
         shouVal = show_value(value)
-        res = "-" + shouVal + "】"
+        res = "【" + shouVal + "】"
       end
     }
     res.html_safe

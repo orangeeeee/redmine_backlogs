@@ -130,7 +130,7 @@
             </span>
             <span class="remaininghours">(<%= story.remaining_hours.to_f %> <%= l(:label_hours) %>)</span>
           </div>
-          <div class="subject"><%= custom_fields_phase(story) %><%= custom_fields_target(story) %><%= h story.subject %></div>
+          <div class="subject"><%= custom_fields_target(story) %><%= h story.subject %></div>
           <%- if @project != story.project %>
             <div class="id project">
               <span class="t"><%= h story.project %></span>
