@@ -179,9 +179,9 @@
 
         var ph2_all_count = $('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").length;
 
-        var bugsCnt = $('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【バグ')").length;
-        var siyoufubiCnt = $('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【仕様不備')").length;
-        var siyouhenkouCnt = $('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【仕様変更')").length;
+        var bugsCnt = $('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【バグ')").length;
+        var siyoufubiCnt = $('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【仕様不備')").length;
+        var siyouhenkouCnt = $('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【仕様変更')").length;
         var functional_ticket_count = $('#stories-for-product-backlog li').find(".tracker_name_field:contains('機能')").length;
         var assignee_name_hd_clzzs = $('.assignee_name_hd_clzz');
         $.each(assignee_name_hd_clzzs, function (i, value) {

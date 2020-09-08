@@ -96,9 +96,9 @@ RB.BoardUpdater = RB.Object.create({
 
     var ph2_all_count = RB.$('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").length;
 
-    var bugsCnt = RB.$('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【バグ')").length;
-    var siyoufubiCnt = RB.$('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【仕様不備')").length;
-    var siyouhenkouCnt = RB.$('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").closest('.model').find(".tracker_name_field:contains('【仕様変更')").length;
+    var bugsCnt = RB.$('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【バグ')").length;
+    var siyoufubiCnt = RB.$('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【仕様不備')").length;
+    var siyouhenkouCnt = RB.$('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【仕様変更')").length;
     var functional_ticket_count = RB.$('#stories-for-product-backlog li').find(".tracker_name_field:contains('機能')").length;
     var assignee_name_hd_clzzs = RB.$('.assignee_name_hd_clzz');
     RB.$.each(assignee_name_hd_clzzs, function(i, value) {
