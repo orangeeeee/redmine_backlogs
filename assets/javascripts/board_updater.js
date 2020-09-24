@@ -117,7 +117,7 @@ RB.BoardUpdater = RB.Object.create({
       else if(RB.$(value).val() === '3') {
         RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_high_1');
       }
-      else if(RB.$(value).val() === '6') {
+      else if(RB.$(value).val() === '4') {
         RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_emergency');
       }
     });
