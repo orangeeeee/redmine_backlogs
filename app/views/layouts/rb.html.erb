@@ -177,6 +177,8 @@
 <script type="text/javascript">
     $(function () {
 
+        var xxxx = $('.phase_field').filter(function (x, i, self) {  return self.indexOf(x).text() === i.text();})
+
         var ph2_all_count = $('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").length;
 
         var bugsCnt = $('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【バグ')").length;
