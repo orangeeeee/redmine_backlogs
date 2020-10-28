@@ -125,6 +125,33 @@ RB.BoardUpdater = RB.Object.create({
     RB.$('#product_backlog_container').find('.name').find('#total_bugfix_counts').html('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
 
 
+    //表用
+    var backlogDom =  RB.$('.backlog  li');
+    var vg_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【VG')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+    var vg_emergency_count = RB.$(vg_tikets).find('.triage_level_clzz[value="4"]').length;
+    RB.$('#vg_emergency_count').text(vg_emergency_count);
+    var vg_high_1_count = RB.$(vg_tikets).find('.triage_level_clzz[value="3"]').length;
+    RB.$('#vg_high_1_count').text(vg_high_1_count);
+    var vg_high_2_count = RB.$(vg_tikets).find('.triage_level_clzz[value="10"]').length;
+    RB.$('#vg_high_2_count').text(vg_high_2_count);
+    var vg_middle_1_count = RB.$(vg_tikets).find('.triage_level_clzz[value="2"]').length;
+    RB.$('#vg_middle_1_count').text(vg_middle_1_count);
+    var vg_middle_2_count = RB.$(vg_tikets).find('.triage_level_clzz[value="11"]').length;
+    var vg_low_count = RB.$(vg_tikets).find('.triage_level_clzz[value="1"]').length;
+    RB.$('#vg_middle_2_count').text(vg_middle_2_count + vg_low_count);
+
+    var ty_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【TY')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+    var ty_emergency_count = RB.$(ty_tikets).find('.triage_level_clzz[value="4"]').length;
+    RB.$('#ty_emergency_count').text(ty_emergency_count);
+    var ty_high_1_count = RB.$(ty_tikets).find('.triage_level_clzz[value="3"]').length;
+    RB.$('#ty_high_1_count').text(ty_high_1_count);
+    var ty_high_2_count = RB.$(ty_tikets).find('.triage_level_clzz[value="10"]').length;
+    RB.$('#ty_high_2_count').text(ty_high_2_count);
+    var ty_middle_1_count = RB.$(ty_tikets).find('.triage_level_clzz[value="2"]').length;
+    RB.$('#ty_middle_1_count').text(ty_middle_1_count);
+    var ty_middle_2_count = RB.$(ty_tikets).find('.triage_level_clzz[value="11"]').length;
+    var ty_low_count = RB.$(ty_tikets).find('.triage_level_clzz[value="1"]').length;
+    RB.$('#ty_middle_2_count').text(ty_middle_2_count + ty_low_count);
     self.processAllItems(data);
     self.adjustPollWait(RB.$(data).children(":not(.meta)").length);
     self.poll();
