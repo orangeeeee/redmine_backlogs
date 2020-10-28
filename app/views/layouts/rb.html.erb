@@ -206,14 +206,31 @@
                 $(value).siblings('.prevent_edit').addClass('prevent_edit_emergency');
             }
         });
-        var ph2_count = ph2_all_count - functional_ticket_count;
+
         $('#product_backlog_container').find('.name').append('<span id="total_bugfix_counts" style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt + '）</span>');
         $('#product_backlog_container').find('.header').find('.fff-right').remove()
 
         //表用
         var backlogDom =  $('.backlog  li');
         var vg_tikets = $(backlogDom).closest('.model').find(".phase_field:contains('【VG')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+        var vg_emergency_count = $(vg_tikets).find('.triage_level_clzz[value="4"]').length;
+        $('#vg_emergency_count').text(vg_emergency_count);
+        var vg_high_1_count = $(vg_tikets).find('.triage_level_clzz[value="3"]').length;
+        $('#vg_high_1_count').text(vg_high_1_count);
+        var vg_high_2_count = $(vg_tikets).find('.triage_level_clzz[value="10"]').length;
+        $('#vg_high_2_count').text(vg_high_2_count);
+        var vg_middle_1_count = $(vg_tikets).find('.triage_level_clzz[value="2"]').length;
+        $('#vg_middle_1_count').text(vg_middle_1_count);
+
         var ty_tikets = $(backlogDom).closest('.model').find(".phase_field:contains('【TY')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+        var ty_emergency_count = $(ty_tikets).find('.triage_level_clzz[value="4"]').length;
+        $('#ty_emergency_count').text(ty_emergency_count);
+        var ty_high_1_count = $(ty_tikets).find('.triage_level_clzz[value="3"]').length;
+        $('#ty_high_1_count').text(ty_high_1_count);
+        var ty_high_2_count = $(ty_tikets).find('.triage_level_clzz[value="10"]').length;
+        $('#ty_high_2_count').text(ty_high_2_count);
+        var ty_middle_1_count = $(ty_tikets).find('.triage_level_clzz[value="2"]').length;
+        $('#ty_middle_1_count').text(ty_middle_1_count);
 
 
     });
