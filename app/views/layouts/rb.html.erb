@@ -177,7 +177,10 @@
 <script type="text/javascript">
     $(function () {
 
-        var xxxx = $('.phase_field').filter(function (x, i, self) {  return self.indexOf(x).text() === i.text();});
+        var targets = new Array();
+        $('.phase_field').each(function() {
+            targets.push($(this).text());
+        });
 
         var ph2_all_count = $('#stories-for-product-backlog li').find(".phase_field:contains('PH2')").length;
 
