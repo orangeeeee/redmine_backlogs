@@ -239,6 +239,7 @@
         $('#ty_middle_2_count').text(ty_middle_2_count + ty_low_count);
 
         var calculated_vg_total_sum = 0;
+        var calculated_ty_total_sum = 0;
 
         $("#summery_tik .vg-count").each(function () {
             var get_textbox_value = $(this).text();
@@ -248,6 +249,13 @@
         });
         $("#vg_total_count").html(calculated_vg_total_sum);
 
+        $("#summery_tik .ty-count").each(function () {
+            var get_textbox_value = $(this).text();
+            if ($.isNumeric(get_textbox_value)) {
+                calculated_ty_total_sum += Number(get_textbox_value);
+            }
+        });
+        $("#ty_total_count").html(calculated_ty_total_sum);
     });
 </script>
 </html>
