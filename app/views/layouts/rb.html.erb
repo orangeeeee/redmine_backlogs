@@ -238,6 +238,16 @@
         var ty_low_count = $(ty_tikets).find('.triage_level_clzz[value="1"]').length;
         $('#ty_middle_2_count').text(ty_middle_2_count + ty_low_count);
 
+        var calculated_vg_total_sum = 0;
+
+        $("#summery_tik .vg-count").each(function () {
+            var get_textbox_value = $(this).text();
+            if ($.isNumeric(get_textbox_value)) {
+                calculated_vg_total_sum += get_textbox_value;
+            }
+        });
+        $("#vg_total_count").html(calculated_vg_total_sum);
+
     });
 </script>
 </html>
