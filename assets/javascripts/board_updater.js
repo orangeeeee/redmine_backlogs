@@ -152,6 +152,27 @@ RB.BoardUpdater = RB.Object.create({
     var ty_middle_2_count = RB.$(ty_tikets).find('.triage_level_clzz[value="11"]').length;
     var ty_low_count = RB.$(ty_tikets).find('.triage_level_clzz[value="1"]').length;
     RB.$('#ty_middle_2_count').text(ty_middle_2_count + ty_low_count);
+
+    var calculated_vg_total_sum = 0;
+    var calculated_ty_total_sum = 0;
+
+    RB.$("#summery_tik .vg-count").each(function () {
+      var get_textbox_value = RB.$(this).text();
+      if (RB.$.isNumeric(get_textbox_value)) {
+        calculated_vg_total_sum += Number(get_textbox_value);
+      }
+    });
+    RB.$("#vg_total_count").html(calculated_vg_total_sum);
+
+    RB.$("#summery_tik .ty-count").each(function () {
+      var get_textbox_value = RB.$(this).text();
+      if (RB.$.isNumeric(get_textbox_value)) {
+        calculated_ty_total_sum += Number(get_textbox_value);
+      }
+    });
+    RB.$("#ty_total_count").html(calculated_ty_total_sum);
+
+
     self.processAllItems(data);
     self.adjustPollWait(RB.$(data).children(":not(.meta)").length);
     self.poll();
