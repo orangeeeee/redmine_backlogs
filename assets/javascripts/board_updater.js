@@ -100,6 +100,8 @@ RB.BoardUpdater = RB.Object.create({
     var siyoufubiCnt = RB.$('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【仕様不備')").length;
     var siyouhenkouCnt = RB.$('#stories-for-product-backlog li').closest('.model').find(".tracker_name_field:contains('【仕様変更')").length;
     var functional_ticket_count = RB.$('#stories-for-product-backlog li').find(".tracker_name_field:contains('機能')").length;
+    var hold_count = $(backlogDom).closest('.model').find(".status_id:contains('保留')").length;
+
     var assignee_name_hd_clzzs = RB.$('.assignee_name_hd_clzz');
     RB.$.each(assignee_name_hd_clzzs, function(i, value) {
       if(RB.$(value).val() !== '') {
@@ -122,7 +124,8 @@ RB.BoardUpdater = RB.Object.create({
       }
     });
     var ph2_count = ph2_all_count - functional_ticket_count;
-    RB.$('#product_backlog_container').find('.name').find('#total_bugfix_counts').html('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt +  '）</span>');
+    RB.$('#product_backlog_container').find('.name').find('#total_bugfix_counts').html('<span style="font-size: 13px;">' + '（PH2チケット数：' + 'バグ:' + bugsCnt + ' 、 ' + '仕不備:' + siyoufubiCnt + ' 、 ' + '仕変:' + siyouhenkouCnt + '、'  + '保留:' + hold_count + '）</span>');
+    RB.$('#product_backlog_container').find('.header').find('.fff-right').remove();
 
 
     //表用
