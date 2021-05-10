@@ -159,7 +159,7 @@ RB.BoardUpdater = RB.Object.create({
     var calculated_ad_total_sum = 0;
     var calculated_ty_total_sum = 0;
 
-    RB.$("#summery_tik .vg-count").each(function () {
+    RB.$("#summery_tik .ad-count").each(function () {
       var get_textbox_value = RB.$(this).text();
       if (RB.$.isNumeric(get_textbox_value)) {
         calculated_ad_total_sum += Number(get_textbox_value);
