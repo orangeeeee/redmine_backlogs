@@ -130,18 +130,18 @@ RB.BoardUpdater = RB.Object.create({
 
     //表用
     var backlogDom =  RB.$('.backlog  li');
-    var vg_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【VG')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
-    var vg_emergency_count = RB.$(vg_tikets).find('.triage_level_clzz[value="4"]').length;
-    RB.$('#vg_emergency_count').text(vg_emergency_count);
-    var vg_high_1_count = RB.$(vg_tikets).find('.triage_level_clzz[value="3"]').length;
-    RB.$('#vg_high_1_count').text(vg_high_1_count);
-    var vg_high_2_count = RB.$(vg_tikets).find('.triage_level_clzz[value="10"]').length;
-    RB.$('#vg_high_2_count').text(vg_high_2_count);
-    var vg_middle_1_count = RB.$(vg_tikets).find('.triage_level_clzz[value="2"]').length;
-    RB.$('#vg_middle_1_count').text(vg_middle_1_count);
-    var vg_middle_2_count = RB.$(vg_tikets).find('.triage_level_clzz[value="11"]').length;
-    var vg_low_count = RB.$(vg_tikets).find('.triage_level_clzz[value="1"]').length;
-    RB.$('#vg_middle_2_count').text(vg_middle_2_count + vg_low_count);
+    var ad_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【AD')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+    var ad_emergency_count = RB.$(ad_tikets).find('.triage_level_clzz[value="4"]').length;
+    RB.$('#ad_emergency_count').text(ad_emergency_count);
+    var ad_high_1_count = RB.$(ad_tikets).find('.triage_level_clzz[value="3"]').length;
+    RB.$('#ad_high_1_count').text(ad_high_1_count);
+    var ad_high_2_count = RB.$(ad_tikets).find('.triage_level_clzz[value="10"]').length;
+    RB.$('#ad_high_2_count').text(ad_high_2_count);
+    var ad_middle_1_count = RB.$(ad_tikets).find('.triage_level_clzz[value="2"]').length;
+    RB.$('#ad_middle_1_count').text(ad_middle_1_count);
+    var ad_middle_2_count = RB.$(ad_tikets).find('.triage_level_clzz[value="11"]').length;
+    var ad_low_count = RB.$(ad_tikets).find('.triage_level_clzz[value="1"]').length;
+    RB.$('#ad_middle_2_count').text(ad_middle_2_count + ad_low_count);
 
     var ty_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【TY')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
     var ty_emergency_count = RB.$(ty_tikets).find('.triage_level_clzz[value="4"]').length;
@@ -156,16 +156,16 @@ RB.BoardUpdater = RB.Object.create({
     var ty_low_count = RB.$(ty_tikets).find('.triage_level_clzz[value="1"]').length;
     RB.$('#ty_middle_2_count').text(ty_middle_2_count + ty_low_count);
 
-    var calculated_vg_total_sum = 0;
+    var calculated_ad_total_sum = 0;
     var calculated_ty_total_sum = 0;
 
     RB.$("#summery_tik .vg-count").each(function () {
       var get_textbox_value = RB.$(this).text();
       if (RB.$.isNumeric(get_textbox_value)) {
-        calculated_vg_total_sum += Number(get_textbox_value);
+        calculated_ad_total_sum += Number(get_textbox_value);
       }
     });
-    RB.$("#vg_total_count").html(calculated_vg_total_sum);
+    RB.$("#ad_total_count").html(calculated_ad_total_sum);
 
     RB.$("#summery_tik .ty-count").each(function () {
       var get_textbox_value = RB.$(this).text();
