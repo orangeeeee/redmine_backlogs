@@ -365,12 +365,12 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
 #backlogs_container .stories .story .id .t a.prevent_edit_middle_1 {
   border: 2px solid #f4ac0b;
 }
+#backlogs_container .stories .story .id .t a.prevent_edit_high_2 {
+  border: 2px solid #ff0000;
+}
 
 #backlogs_container .stories .story .id .t a.prevent_edit_high_1 {
   border: 2px solid #db6c4d;
-}
-#backlogs_container .stories .story .id .t a.prevent_edit_high_2 {
-  border: 2px solid #ff0000;
 }
 
 #backlogs_container .stories .story .id .t a.prevent_edit_emergency_2 {
