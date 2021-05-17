@@ -120,7 +120,7 @@ RB.BoardUpdater = RB.Object.create({
         RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_high_1');
       }
       else if(RB.$(value).val() === '4') {
-        RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_emergency');
+        RB.$(value).siblings('.prevent_edit').addClass('prevent_edit_emergency_1');
       }
     });
     var ph2_count = ph2_all_count - functional_ticket_count;
@@ -131,8 +131,10 @@ RB.BoardUpdater = RB.Object.create({
     //表用
     var backlogDom =  RB.$('.backlog  li');
     var ad_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【AD')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
-    var ad_emergency_count = RB.$(ad_tikets).find('.triage_level_clzz[value="4"]').length;
-    RB.$('#ad_emergency_count').text(ad_emergency_count);
+    var ad_emergency_1_count = RB.$(ad_tikets).find('.triage_level_clzz[value="4"]').length;
+    RB.$('#ad_emergency_1_count').text(ad_emergency_1_count);
+    var ad_emergency_2_count = RB.$(ad_tikets).find('.triage_level_clzz[value="12"]').length;
+    RB.$('#ad_emergency_2_count').text(ad_emergency_2_count);
     var ad_high_1_count = RB.$(ad_tikets).find('.triage_level_clzz[value="3"]').length;
     RB.$('#ad_high_1_count').text(ad_high_1_count);
     var ad_high_2_count = RB.$(ad_tikets).find('.triage_level_clzz[value="10"]').length;
@@ -144,8 +146,12 @@ RB.BoardUpdater = RB.Object.create({
     RB.$('#ad_middle_2_count').text(ad_middle_2_count + ad_low_count);
 
     var ty_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【TY')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
-    var ty_emergency_count = RB.$(ty_tikets).find('.triage_level_clzz[value="4"]').length;
-    RB.$('#ty_emergency_count').text(ty_emergency_count);
+    var ty_emergency_1_count = RB.$(ty_tikets).find('.triage_level_clzz[value="4"]').length;
+    RB.$('#ty_emergency_1_count').text(ty_emergency_1_count);
+
+    var ty_emergency_2_count = RB.$(ty_tikets).find('.triage_level_clzz[value="12"]').length;
+    RB.$('#ty_emergency_2_count').text(ty_emergency_2_count);
+
     var ty_high_1_count = RB.$(ty_tikets).find('.triage_level_clzz[value="3"]').length;
     RB.$('#ty_high_1_count').text(ty_high_1_count);
     var ty_high_2_count = RB.$(ty_tikets).find('.triage_level_clzz[value="10"]').length;
