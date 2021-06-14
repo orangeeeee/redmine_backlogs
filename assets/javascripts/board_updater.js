@@ -147,6 +147,7 @@ RB.BoardUpdater = RB.Object.create({
     RB.$('#ad_middle_2_count').text(ad_middle_2_count + ad_low_count - ad_function_tikets);
 
     var ty_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【TY')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+    var ty_function_tikets = RB.$(ty_tikets).find(".tracker_name_field:contains('機能')").length;
     var ty_emergency_1_count = RB.$(ty_tikets).find('.triage_level_clzz[value="4"]').length;
     RB.$('#ty_emergency_1_count').text(ty_emergency_1_count);
 
@@ -161,7 +162,7 @@ RB.BoardUpdater = RB.Object.create({
     RB.$('#ty_middle_1_count').text(ty_middle_1_count);
     var ty_middle_2_count = RB.$(ty_tikets).find('.triage_level_clzz[value="11"]').length;
     var ty_low_count = RB.$(ty_tikets).find('.triage_level_clzz[value="1"]').length;
-    RB.$('#ty_middle_2_count').text(ty_middle_2_count + ty_low_count);
+    RB.$('#ty_middle_2_count').text(ty_middle_2_count + ty_low_count - ty_function_tikets);
 
     var calculated_ad_total_sum = 0;
     var calculated_ty_total_sum = 0;
