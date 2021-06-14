@@ -130,7 +130,8 @@ RB.BoardUpdater = RB.Object.create({
 
     //表用
     var backlogDom =  RB.$('.backlog  li');
-    var ad_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【AD')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+    var ad_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【AD】')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+    var ad_function_tikets = RB.$(ad_tikets).find(".tracker_name_field:contains('機能')").length;
     var ad_emergency_1_count = RB.$(ad_tikets).find('.triage_level_clzz[value="4"]').length;
     RB.$('#ad_emergency_1_count').text(ad_emergency_1_count);
     var ad_emergency_2_count = RB.$(ad_tikets).find('.triage_level_clzz[value="12"]').length;
@@ -143,7 +144,7 @@ RB.BoardUpdater = RB.Object.create({
     RB.$('#ad_middle_1_count').text(ad_middle_1_count);
     var ad_middle_2_count = RB.$(ad_tikets).find('.triage_level_clzz[value="11"]').length;
     var ad_low_count = RB.$(ad_tikets).find('.triage_level_clzz[value="1"]').length;
-    RB.$('#ad_middle_2_count').text(ad_middle_2_count + ad_low_count);
+    RB.$('#ad_middle_2_count').text(ad_middle_2_count + ad_low_count - ad_function_tikets);
 
     var ty_tikets = RB.$(backlogDom).closest('.model').find(".phase_field:contains('【TY')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
     var ty_emergency_1_count = RB.$(ty_tikets).find('.triage_level_clzz[value="4"]').length;

@@ -216,7 +216,9 @@
 
         //表用
         var backlogDom =  $('.backlog  li');
+
         var ad_tikets = $(backlogDom).closest('.model').find(".phase_field:contains('【AD')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
+        var ad_function_tikets = $(ad_tikets).find(".tracker_name_field:contains('機能')").length;
         var ad_emergency_1_count = $(ad_tikets).find('.triage_level_clzz[value="4"]').length;
         $('#ad_emergency_1_count').text(ad_emergency_1_count);
         var ad_emergency_2_count = $(ad_tikets).find('.triage_level_clzz[value="12"]').length;
@@ -229,7 +231,7 @@
         $('#ad_middle_1_count').text(ad_middle_1_count);
         var ad_middle_2_count = $(ad_tikets).find('.triage_level_clzz[value="11"]').length;
         var ad_low_count = $(ad_tikets).find('.triage_level_clzz[value="1"]').length;
-        $('#ad_middle_2_count').text(ad_middle_2_count + ad_low_count);
+        $('#ad_middle_2_count').text(ad_middle_2_count + ad_low_count - ad_function_tikets);
 
         var ty_tikets = $(backlogDom).closest('.model').find(".phase_field:contains('【TY')").parents('.ui-sortable-handle').has(".status_id:contains('新規'),.status_id:contains('進行中'),.status_id:contains('レビュー待ち'),.status_id:contains('保留')");
         var ty_emergency_1_count = $(ty_tikets).find('.triage_level_clzz[value="4"]').length;
